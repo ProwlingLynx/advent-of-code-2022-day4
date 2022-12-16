@@ -23,3 +23,13 @@ is hard to change when the second part drops.
   - So all the solution would need to do is call elf1 on elf2 and then reverse the order.
   - I think it should not use the compare method from comparable. This is to solve the problem only.
 - I think I can get away with using a list of pairs that calls the isOverlapping method on each elf.
+
+## Part two thoughts
+Part two was not a bad experience to refactor. However, I did find myself having to add three additional methods to classes
+I have already written and tested. I tried to implement inheritance to solve the issue by extending the elf class, but quickly realized that I did
+not have getters to access the private fields. I also considered polymorphism, but again my code was too rigid to let me
+do so reasonably.
+
+Maybe I could have used polymorphism, but I did not want to add a useless parameter. I am going to have to consider 
+having data classes with  getters and setters as a way to make the data class more accessible to inheritance and maybe
+polymorphism.
