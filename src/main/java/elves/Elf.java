@@ -13,6 +13,9 @@ class Elf {
     boolean isOverlappingCompletely(Elf otherElf){
         return getStartingDeck() <= otherElf.getStartingDeck() && getLastDeck() >= otherElf.getLastDeck();
     }
+    boolean isOverlapping(Elf otherElf){
+        return getStartingDeck() <= otherElf.getLastDeck() && getLastDeck() >= otherElf.getStartingDeck();
+    }
     int getStartingDeck(){
         return assignedDecks[0];
     }

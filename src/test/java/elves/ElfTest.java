@@ -33,4 +33,16 @@ class ElfTest {
                 () -> assertFalse(testElf.isOverlappingCompletely(testCaseElf3))
         );
     }
+    @Test
+    void isOverlapping(){
+        Elf testCaseElf1 = new Elf("1-1");
+        Elf testCaseElf2 = new Elf("9-20");
+        Elf testCaseElf3 = new Elf("11-16");
+
+        assertAll(
+                () -> assertFalse(testElf.isOverlapping(testCaseElf1)),
+                () -> assertTrue(testElf.isOverlapping(testCaseElf2)),
+                () -> assertTrue(testElf.isOverlapping(testCaseElf3))
+        );
+    }
 }

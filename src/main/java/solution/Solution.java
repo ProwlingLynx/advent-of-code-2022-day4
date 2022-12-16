@@ -16,6 +16,14 @@ public class Solution  {
             }
         }
             System.out.println(count);
+
+        int inefficientCount = 0;
+            for(ElfPairs pair: deckAssignmentList){
+                if (pair.isAssignmentSlightlyInefficient()){
+                    inefficientCount++;
+                }
+            }
+            System.out.println(inefficientCount);
         } catch (Exception e){
             System.out.println("Something went wrong");
             e.printStackTrace();

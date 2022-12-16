@@ -15,4 +15,10 @@ public class ElfPairs {
         }
         return true;
     }
+    public boolean isAssignmentSlightlyInefficient(){
+        if (!elf1.isOverlapping(elf2)){
+            return elf2.isOverlapping(elf1);
+        }
+        return true;
+    }
 }
