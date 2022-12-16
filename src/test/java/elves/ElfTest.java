@@ -19,7 +19,7 @@ class ElfTest {
 
     @Test
     void getLastDeck() {
-        assertEquals(testElf.getLastDeck(), 10);
+        assertEquals(testElf.getLastDeck(), 14);
     }
     @Test
     void isOverlappingCompletely() {
